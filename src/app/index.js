@@ -4,25 +4,42 @@ angular.module('mobileDemo', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
       .state('main', {
-        url: '/',
+        url: '/main',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
       .state('main.top', {
         url: '/top',
-        templateUrl: 'app/top/top.html',
-        controller: 'TopCtrl'
+        views: {
+          'menuContent': {
+            templateUrl: 'app/top/top.html',
+            controller: 'TopCtrl'
+          }
+        }
+      })
+      .state('main.content', {
+        url: '/content',
+        views: {
+          'menuContent': {
+            templateUrl: 'app/content/content.html',
+            controller: 'ContentCtrl'
+          }
+        }
       })
       .state('main.setting', {
         url: '/setting',
-        templateUrl: 'app/setting/setting.html',
-        controller: 'SettingCtrl'
+        views: {
+          'menuContent': {
+            templateUrl: 'app/setting/setting.html',
+            controller: 'SettingCtrl'
+          }
+        }
       })
     ;
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/main/top');
 
     $locationProvider.html5Mode({
-      enabled: true,
+      enabled: false,
       requireBase: false
     });
   })

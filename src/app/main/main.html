@@ -1,21 +1,55 @@
-<ion-pane>
-  <ion-header-bar class="bar-energized">
-    <h1 class="title">タイトル</h1>
-  </ion-header-bar>
-  <ion-content>
-    Hello！
-    <i class="ion-social-octocat"></i>
+<ion-side-menus>
 
-    <ng-include src="'components/navbar/navbar.html'"></ng-include>
+  <!-- センターエリア -->
+  <ion-pane ion-side-menu-content>
 
+    <!-- ion-nav-bar は各ion-view側で上書きすることもできる -->
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button class="button-clear">
+        <i class="icon ion-chevron-left"></i> back
+      </ion-nav-back-button>
+    </ion-nav-bar>
 
-    <script id="popover.html" type="text/ng-template">
-      This application is a demonstration site using the ionic framework.
-    </script>
-    <ng-include src="'popover.html'"></ng-include>
+    <!-- 各テンプレート埋め込み -->
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
 
-    <ng-include src="'app/top/top_tutorial.html'"></ng-include>
+  <!-- 左メニュー -->
+  <ion-side-menu side="left">
+    <!-- ion-pane には style 属性が使える。ページ全体の定義はそこで -->
+    <ion-pane style="background-color: #262626">
+      <div class="button-bar">
+        <a class="button button-clear button-stable button-large" menu-close ui-sref="main.top">
+          <div align="left">
+            <i class="ion-home"></i> HOME
+          </div>
+        </a>
+      </div>
+      <div class="button-bar">
+        <a class="button button-clear button-stable button-large" menu-toggle="right">
+          <div align="left">
+            <i class="ion-help-circled"></i> ヘルプ
+          </div>
+        </a>
+      </div>
+    </ion-pane>
+  </ion-side-menu>
 
+  <!-- 右メニュー -->
+  <ion-side-menu side="right">
+    <ion-pane style="background: orange; color: dimgray">
+      <div class="card" align="center">
+        <br>
+        <br>
+        <br>
+        ここにヘルプ的なものを記載。
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </ion-pane>
+  </ion-side-menu>
 
-  </ion-content>
-</ion-pane>
+</ion-side-menus>

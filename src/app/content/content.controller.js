@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('mobileDemo')
-  .controller('SettingCtrl', function ($scope) {
+  .controller('ContentCtrl', function ($scope) {
     $scope.awesomeThings = [];
   });
