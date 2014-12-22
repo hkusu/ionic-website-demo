@@ -8,6 +8,7 @@ This project has been created in [generator-gulp-angular](https://github.com/Swi
 
 ```
 $ git clone https://github.com/hkusu/ionic-website-demo
+$ cd ionic-website-demo
 $ npm install
 $ bower install
 ```
