@@ -17,12 +17,12 @@ angular.module('mobileDemo', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
           }
         }
       })
-      .state('main.content', {
-        url: '/content',
+      .state('main.qiita', {
+        url: '/qiita',
         views: {
           'menuContent': {
-            templateUrl: 'app/content/content.html',
-            controller: 'ContentCtrl'
+            templateUrl: 'app/qiita/qiita.html',
+            controller: 'QiitaCtrl'
           }
         }
       })
