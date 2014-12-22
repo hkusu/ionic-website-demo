@@ -21,11 +21,11 @@
       <div class="col">
         <!-- button-bar を使うと 100% 幅のボタンを作れる -->
         <div class="button-bar">
-          <a class="button button-balanced button-outline" ui-sref="main.content">
+          <a class="button button-balanced button-outline" ui-sref="main.qiita">
             <div style="font-size: 60px; margin: 30px 0px 0px 0px;">
-              <i class="ion-social-octocat"></i>
+              <i class="ion-search"></i>
             </div>
-            コンテンツ
+            Qiita 新着投稿
           </a>
         </div>
       </div>
@@ -67,14 +67,14 @@
     <div class="row">
       <div class="col" style="color: yellowgreen; font-size: 16px" align="center" ng-click="openInfoPopover($event)">
         <br>
-        <i class="ion-information-circled"></i>このアプリについて
+        <i class="ion-information-circled"></i>このサイトについて
       </div>
     </div>
 
     <!-- モーダル -->
     <script id="top.modal.html" type="text/ng-template">
       <ion-modal-view>
-        <ion-pane style="background: ghostwhite">
+        <ion-pane style="background: lightgoldenrodyellow">
 
           <!--
           <ion-slide-box auto-play="true" slide-interval="2000" does-continue="true">
@@ -148,7 +148,7 @@
           <br>
           <div align="center">
             <a class="button button-small button-dark" ng-click="closeInfoPopover()">
-              <i class="ion-close-circled"> 閉じる</i>
+              <i class="ion-close-circled"></i> 閉じる
             </a>
           </div>
         </ion-content>
